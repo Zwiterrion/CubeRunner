@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Babylon Template</title>
+<body>
+    <canvas id="renderCanvas" touch-action="none" tabindex="1"></canvas>
+
+    <div class="main-modal" id="main-modal" onclick="start(event)">
+        <h1 class="title">CUBE</h1>
+        <h1 class="title">RUNNER</h1>
+        <h3 class="title score-title" id="score-title">Score : 127</h3>
+        <div class="back">
+            <div class="arrow-wel">
+                <div class="left" onclick="changeSkin(event, -1)">
+                    <img src="./assets/arrow-wel.png" />
+                </div>
+                <div class="right" onclick="changeSkin(event, 1)">
+                    <img src="./assets/arrow-wel.png" />
+                </div>
+            </div>
+            <div class="price" id="price-container" onclick="buy(event)">
+                <h4 class="title" id="price">PRICE : 0</h4>
+                <button class="buy" id="buy">BUY</h4>
+            </div>
+        </div>
+
+        <button class="show-buttons" id="show-buttons" onclick="toggleButtons(event)">Show
+            actions</button>
+
+        <button class="show-buttons swap-buttons" id="swap-buttons"
+            onclick="swapButtons(event)">Lefty</button>
+
+        <div class="score" id="score">
+            <h3>BEST</h3>
+            <h3 id="best-score">0</h3>
+        </div>
+    </div>
+
+    <div class="pause pause--hide" id="pause" onclick="unpause()">
+        <h1 class="title">Break</h1>
+        <button class="reset show-buttons" onclick="home(event)">Reset</button>
+    </div>
+
+    <div class="ads ads--hide" id="ads">
+        <div class="title ads--title">
+            <div>You loose !</div>
+            <div>Is there hope ?</div>
+        </div>
+        <div class="ads-body">
+            <div class="ads--block" onclick="ad(event)">
+                <img src="./assets/gem.png" />
+                <span class="ads-span">Keep your cube and continue to play!</span>
+            </div>
+            <span class="ads--block">vs</span>
+            <div class="ads--block" onclick="stopGame(event)">
+                <div class="ads-span">Give up</div>
+                <span class="give-up-blocks" id="blocks-picked-up">13</span>
+                <div class="ads-span">picked up cube since last checkpoint!</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
